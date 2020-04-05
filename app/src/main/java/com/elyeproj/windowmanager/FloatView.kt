@@ -15,7 +15,7 @@ abstract class FloatView (
     defStyleAttr: Int = 0
 ) : AppCompatImageView(context, attrs, defStyleAttr) {
 
-    protected val windowManager by lazy {
+    private val windowManager by lazy {
         context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
     }
     private var xInitCord: Int = 0
@@ -23,12 +23,7 @@ abstract class FloatView (
     private var xInitMargin: Int = 0
     private var yInitMargin: Int = 0
 
-    private val type: Int
-        get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
-        } else {
-            WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
-        }
+    abstract val type: Int
 
     init {
         val paramFloat = WindowManager.LayoutParams(
