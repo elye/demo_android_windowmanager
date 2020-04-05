@@ -23,18 +23,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_service_float.setOnClickListener{
+        btn_service_float_overlay.setOnClickListener{
             if (requestPermission(SERVICE_FLOAT_REQUEST_CODE)) {
                 return@setOnClickListener
             }
             showServiceFloat()
         }
 
-        btn_activity_float.setOnClickListener {
+        btn_activity_float_panel.setOnClickListener {
             showActivityFloat()
         }
 
-        btn_activity_service_float.setOnClickListener {
+        btn_activity_float_overlay.setOnClickListener {
             if (requestPermission(ACTIVITY_SERVICE_FLOAT_REQUEST_CODE)) {
                 return@setOnClickListener
             }

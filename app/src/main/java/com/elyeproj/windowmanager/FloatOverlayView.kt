@@ -5,7 +5,7 @@ import android.os.Build
 import android.util.AttributeSet
 import android.view.WindowManager
 
-class FloatServiceView @JvmOverloads constructor(
+class FloatOverlayView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
