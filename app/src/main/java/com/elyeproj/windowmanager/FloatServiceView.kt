@@ -24,10 +24,10 @@ class FloatServiceView @JvmOverloads constructor(
     private var yInitMargin: Int = 0
 
     private val type: Int
-        get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
         } else {
-            WindowManager.LayoutParams.TYPE_PHONE
+            WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
         }
 
     init {
