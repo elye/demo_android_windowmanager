@@ -7,7 +7,7 @@ import android.content.Intent
 import android.os.IBinder
 import android.view.LayoutInflater
 
-class FloatService: Service() {
+class ServiceFloat: Service() {
 
     override fun onStartCommand(
         intent: Intent?,

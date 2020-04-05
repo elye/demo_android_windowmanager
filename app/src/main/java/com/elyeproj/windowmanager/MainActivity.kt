@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showServiceFloat() {
-        startService(Intent(this, FloatService::class.java))
+        startService(Intent(this, ServiceFloat::class.java))
     }
 
     private fun showActivityFloat() {
